@@ -1,4 +1,3 @@
-
 def main():
     # Pedir un numero decimal al usuario
     num = float(input("Introduce un número decimal (puede ser negativo): "))
