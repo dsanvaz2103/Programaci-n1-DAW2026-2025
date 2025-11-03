@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio de Programación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007acc;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #eee;
+            width: 200px;
+            min-height: 100vh;
+            float: left;
+            padding: 1rem;
+        }
+
+        nav a {
+            display: block;
+            padding: 0.5rem 0;
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 2rem;
+            background-color: white;
+        }
+
+        h2, h3 {
+            color: #007acc;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .reflection {
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f0f0f0;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        details p, details table, details section {
+            margin-left: 1rem;
+        }
+
+        .padlet-frame {
+            border: none;
+            width: 100%;
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background-color: #e6f3ff;
+            border-left: 5px solid #007acc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Botón de GitHub */
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #24292e;
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .github-link:hover {
+            background-color: #333;
+        }
+
+        .github-icon {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mi Portafolio de Programación</h1>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#tema1">Tema 1: Clasificación de los Lenguajes</a>
+    <a href="#tema2">Tema 2: Programación en Python</a>
+</nav>
+
+<main id="inicio">
+    <h2>Inicio</h2>
+    <p>Bienvenido a mi portafolio de programación. Aquí podrás encontrar información sobre distintos lenguajes de programación, diagramas de flujo y ejercicios prácticos.</p>
+
+    <!-- TEMA 1 -->
+    <details id="tema1" open>
+        <summary>Tema 1: Clasificación de los Lenguajes</summary>
+
+        <section>
+            <h3>📘 Línea Temporal de la Programación</h3>
+            <p>Explora la siguiente línea temporal interactiva sobre la evolución de los lenguajes de programación:</p>
+            <iframe class="padlet-frame" src="https://padlet.com/dsv0914/programacion-linea-temporal-z9xdhsy2pkvmp9jg"></iframe>
+        </section>
+
+        <section class="card">
+            <h3>🧠 Ejercicio 1: ¿Qué es la programación?</h3>
+            <p>La programación es el proceso sistemático de diseñar y escribir instrucciones que una máquina puede entender y ejecutar.  
+            Sus dos componentes fundamentales: los algoritmos y el código.</p>
+        </section>
+
+        <section class="card">
+            <h3>💻 Ejercicio 2: Algoritmo vs Código</h3>
+            <p><strong>Algoritmo:</strong> Un algoritmo es una secuencia precisa de pasos que se sigue para alcanzar un objetivo específico.  
+            Es como una receta detallada donde cada paso está perfectamente definido y ordenado.</p>
+            <p><strong>Código:</strong> El código es la implementación práctica de un algoritmo utilizando un lenguaje de programación específico.  
+            Es la traducción del algoritmo a un formato que la computadora pueda entender directamente.</p>
+        </section>
+
+        <section class="card">
+            <h3>🔷 Ejercicio 3: Diagrama de flujo</h3>
+            <p>Haz clic en el siguiente enlace para acceder a los diagramas de flujo creados en PSeInt almacenados en el repositorio de GitHub:</p>
+            <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint/Diagramas" target="_blank">
+                <svg class="github-icon" viewBox="0 0 24 24">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+                </svg>
+                Ver diagramas en GitHub
+            </a>
+        </section>
+
+        <section class="card">
+            <h3>🐍 Python</h3>
+            <p>Accede a los scripts y ejemplos en Python:</p>
+            <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint/Python" target="_blank">
+                <svg class="github-icon" viewBox="0 0 24 24">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+                </svg>
+                Ver Python en GitHub
+            </a>
+        </section>
+
+        <section class="card">
+            <h3>📝 Pseudocódigo</h3>
+            <p>Revisa los esquemas y pseudocódigos almacenados en el repositorio:</p>
+            <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint" target="_blank">
+                <svg class="github-icon" viewBox="0 0 24 24">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+                </svg>
+                Ver Pseudocódigo en GitHub
+            </a>
+        </section>
+
+        <section>
+            <h3>🧩 Clasificación de los Lenguajes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lenguaje</th>
+                        <th>Propósito</th>
+                        <th>Tipo</th>
+                        <th>Uso Principal</th>
+                        <th>Plataforma</th>
+                        <th>Ventajas</th>
+                        <th>Desventajas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python</td>
+                        <td>Desarrollo general</td>
+                        <td>Interpretado</td>
+                        <td>Data Science, ML, Web</td>
+                        <td>Multiplataforma</td>
+                        <td>Fácil de aprender, extensa biblioteca</td>
+                        <td>Lento en ejecución</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Desarrollo general</td>
+                        <td>Interpretado</td>
+                        <td>Frontend/Backend web</td>
+                        <td>Navegadores, Node.js</td>
+                        <td>Integral al web, soporte universal</td>
+                        <td>Difícil de depurar</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Desarrollo general</td>
+                        <td>Compilado</td>
+                        <td>Enterprise, Android</td>
+                        <td>JVM</td>
+                        <td>Independiente de plataforma, alto rendimiento</td>
+                        <td>Sintaxis verbose</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <p class="reflection"><strong>Reflexión:</strong> ¿Cuál elegirías para aprender a programar y por qué?</p>
+            <p>Yo escogería Java y luego JavaScript, ya que son lenguajes completos y muy demandados en el ámbito laboral.</p>
+        </section>
+    </details>
+
+    <!-- TEMA 2 -->
+    <details id="tema2">
+        <summary>Tema 2: Programación en Python</summary>
+        <section class="card">
+            <h3>🐍 Tema 2 en Python</h3>
+            <p>Haz clic en el siguiente enlace para acceder al contenido del Tema 2 en el repositorio de GitHub:</p>
+            <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint/Python/Tema2" target="_blank">
+                <svg class="github-icon" viewBox="0 0 24 24">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+                </svg>
+                Ver Tema 2 en GitHub
+            </a>
+        </section>
+    </details>
+</main>
+
+<footer>
+    &copy; 2025 Mi Portafolio de Programación
+</footer>
+
+</body>
+</html>
