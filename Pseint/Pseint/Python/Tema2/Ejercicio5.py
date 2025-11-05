@@ -1,11 +1,16 @@
-# Creamos una lista de 5 elementos inicializados en 0
-numeros = [0] * 5
+cantidad = int(input("¿Cuantos numeros deseas introducir?: "))
 
-# Pedimos los 5 números decimales
-for i in range(5):
-    numeros[i] = float(input(f"Introduzca el número decimal {i+1}: "))
+numero = [0] * cantidad
 
-# Mostramos los números en el mismo orden
-print("\nLos números introducidos son:")
-for i in range(5):
-    print(numeros[i])
+for i in range(cantidad):
+    numero[i] = int(input(f"Introduzca el numero {i+1}: "))
+
+print("\nLos numeros en orden inverso son: ")
+#for i in range(len(numero) -1,-1,-1):
+#    print(numero[i])
+
+# Hacer el invertido pero con un while en vez de un for
+i = len(numero) - 1  
+while i >= 0:
+    print(numero[i])
+    i -= 1  
