@@ -12,8 +12,8 @@ for x in original:            # recorremos cada elemento de 'original'
 copia4 = original             # asignación directa 
 
 # 3. Modificar copia4 y copia3
-copia4.pop()   # eliminar el último elemento
-copia3.pop(0)  # eliminar el primer elemento
+copia4.remove(5)   # eliminar el último elemento
+copia3.remove(1)  # eliminar el primer elemento
 
 # 4. Mostrar los resultados
 print("original:", original)
