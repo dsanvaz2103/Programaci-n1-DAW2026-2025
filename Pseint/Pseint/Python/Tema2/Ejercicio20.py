@@ -9,7 +9,7 @@ for x in original:            # recorremos cada elemento de 'original'
     copia3.append(x)          # agregamos ese elemento a 'copia3'
 
 
-copia4 = original             # asignación directa (misma referencia)
+copia4 = original             # asignación directa 
 
 # 3. Modificar copia4 y copia3
 copia4.pop()   # eliminar el último elemento
@@ -22,7 +22,7 @@ print("copia2:", copia2)
 print("copia3:", copia3)
 print("copia4:", copia4)
 
-# 5. Comparar los arrays (usando el mismo principio del Ejercicio 17)
+# 5. Comparar los arrays 
 def comparar_listas(lista1, lista2):
     return lista1 == lista2
 
