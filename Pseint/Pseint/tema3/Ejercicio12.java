@@ -12,10 +12,10 @@ import java.util.Scanner;
  */
 public class Ejercicio12 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Introduce un número: ");
-        double num = sc.nextDouble();
+        double num = scan.nextDouble();
 
         // Usando operador ternario
         double absoluto = (num < 0) ? -num : num;

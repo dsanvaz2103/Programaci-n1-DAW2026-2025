@@ -12,11 +12,11 @@ import java.util.Scanner;
  */
 public class Ejercicio6 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         double PI = 3.141592653589793;
 
         System.out.print("Introduce el radio de la circunferencia: ");
-        double radio = sc.nextDouble();
+        double radio = scan.nextDouble();
 
         double longitud = 2 * PI * radio;
         double area = PI * radio * radio;

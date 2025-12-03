@@ -12,17 +12,17 @@ import java.util.Scanner;
  */
 public class Ejercicio9 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         // Solicitar datos al usuario
         System.out.print(" ¿Esta lloviendo? (true/false): ");
-        boolean llueve = sc.nextBoolean();
+        boolean llueve = scan.nextBoolean();
 
         System.out.print("¿Has terminado tus tareas? (true/false): ");
-        boolean tareasTerminadas = sc.nextBoolean();
+        boolean tareasTerminadas = scan.nextBoolean();
 
         System.out.print("¿Necesitas ir a la biblioteca? (true/false): ");
-        boolean irBiblioteca = sc.nextBoolean();
+        boolean irBiblioteca = scan.nextBoolean();
 
         // Lógica para decidir si puede salir
         boolean puedeSalir = (!llueve && tareasTerminadas) || irBiblioteca;

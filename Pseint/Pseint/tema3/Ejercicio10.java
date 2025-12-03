@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Ejercicio10 {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         // Precios por kilo
         final double PRECIO_MANZANAS = 2.35;
@@ -21,17 +21,17 @@ public class Ejercicio10 {
 
         // Pedir ventas de manzanas
         System.out.print("Ventas de manzanas (Semestre en kg): ");
-        double manzanas1 = sc.nextDouble();
+        double manzanas1 = scan.nextDouble();
 
         System.out.print("Ventas de manzanas (Segundo semestre en kg): ");
-        double manzanas2 = sc.nextDouble();
+        double manzanas2 = scan.nextDouble();
 
         // Pedir ventas de peras
         System.out.print("Ventas de peras (Semestre en kg): ");
-        double peras1 = sc.nextDouble();
+        double peras1 = scan.nextDouble();
 
         System.out.print("Ventas de peras (Segundo semestre en kg): ");
-        double peras2 = sc.nextDouble();
+        double peras2 = scan.nextDouble();
 
         // Cálculo total
         double totalManzanas = (manzanas1 + manzanas2) * PRECIO_MANZANAS;

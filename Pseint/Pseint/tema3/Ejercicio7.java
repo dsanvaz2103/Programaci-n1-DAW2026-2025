@@ -12,10 +12,10 @@ import java.util.Scanner;
  */
 public class Ejercicio7 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Introduce tu edad: ");
-        int edad = sc.nextInt();
+        int edad = scan.nextInt();
 
         boolean mayor = edad >= 18;
 

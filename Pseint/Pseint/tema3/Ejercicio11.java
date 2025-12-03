@@ -12,13 +12,13 @@ import java.util.Scanner;
  */
 public class Ejercicio11 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Introduce el primer numero: ");
-        double num1 = sc.nextDouble();
+        double num1 = scan.nextDouble();
 
         System.out.print("Introduce el segundo numero: ");
-        double num2 = sc.nextDouble();
+        double num2 = scan.nextDouble();
 
         // Uso del operador ternario
         double mayor = (num1 > num2) ? num1 : num2;
