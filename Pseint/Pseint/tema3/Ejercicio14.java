@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Ejercicio14 {
     public static void main(String[] args) {
-         Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         // Solicitar notas al usuario
         System.out.print("Ingrese la nota del primer trimestre: ");
