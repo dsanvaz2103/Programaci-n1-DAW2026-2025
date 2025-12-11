@@ -154,6 +154,7 @@
     <a href="#inicio">Inicio</a>
     <a href="#tema1">Tema 1: Clasificación de los Lenguajes</a>
     <a href="#tema2">Tema 2: Arrays y Cadenas en Python</a>
+    <a href="#tema3">Tema 3: Fundamentos de Java — Apuntes esenciales</a>
   </nav>
 
   <main id="inicio">
@@ -382,227 +383,377 @@
       </section>
     </details>
 
-      <!-- CONTENIDO DEL TEMA 2 ORIGINAL -->
-      <details>
-        <summary>Tema 2: Arrays y Cadenas</summary>
+    <!-- CONTENIDO DEL TEMA 2 ORIGINAL -->
+    <details id="tema2" open>
+      <summary>Tema 2: Arrays y Cadenas</summary>
 
-        <section class="card">
-          <h3>🐍 Enlace de Ejercicios Tema 2 en GitHubo</h3>
-          <p>Haz clic en el siguiente enlace para acceder:</p>
-          <a class="github-link"
-            href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint/Python/Tema2"
-            target="_blank">
-            <svg class="github-icon" viewBox="0 0 24 24">
-              <path d="M12 .297c-6.63 0-12 5.373-12 12 ..." />
-            </svg> Ver Ejercicios en GitHub </a>
-        </section>
-
-
-        <section class="card">
-          <h3>📘 Apuntes: Arrays y Cadenas en Python</h3>
-          <p>Resumen de los conceptos y fundamentos más importantes sobre <strong>arrays</strong> (listas) y
-            <strong>cadenas de caracteres</strong> en Python:
-          </p>
-          <ul>
-            <li><strong>Array (Lista):</strong> estructura que almacena múltiples valores bajo un mismo nombre. En
-              Python
-              se implementa mediante listas <code>[]</code>.</li>
-            <li><strong>Características:</strong> ordenadas, mutables, pueden contener datos homogéneos o heterogéneos.
-            </li>
-            <li><strong>Declaración:</strong> <code>numeros = [10, 20, 30]</code></li>
-            <li><strong>Acceso por índice:</strong> empieza en 0. Ejemplo: <code>numeros[0]</code> devuelve el primer
-              elemento.</li>
-            <li><strong>Recorrido:</strong> con bucles (<code>for n in lista</code> o
-              <code>for i in range(len(lista))</code>).
-            </li>
-            <li><strong>Métodos comunes:</strong> <code>append()</code>, <code>insert()</code>, <code>remove()</code>,
-              <code>pop()</code>, <code>len()</code>.
-            </li>
-            <li><strong>Cadenas de texto (Strings):</strong> secuencias de caracteres inmutables. Se definen con
-              comillas
-              simples o dobles.</li>
-            <li><strong>Operaciones básicas:</strong> <code>len()</code>, concatenación (<code>+</code>), acceso por
-              índice, métodos <code>.lower()</code>, <code>.upper()</code>, <code>.find()</code>, etc.</li>
-            <li><strong>Arrays y cadenas combinados:</strong> listas que contienen textos, como
-              <code>nombres = ["Ana", "Luis", "Marta"]</code>.
-            </li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🐍 Enlace de Ejercicios Tema 2 en GitHubo</h3>
+        <p>Haz clic en el siguiente enlace para acceder:</p>
+        <a class="github-link"
+          href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint/Python/Tema2"
+          target="_blank">
+          <svg class="github-icon" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ..." />
+          </svg> Ver Pseudocódigo en GitHub </a>
+      </section>
 
 
-        <!-- ======================
+      <section class="card">
+        <h3>📘 Apuntes: Arrays y Cadenas en Python</h3>
+        <p>Resumen de los conceptos y fundamentos más importantes sobre <strong>arrays</strong> (listas) y
+          <strong>cadenas de caracteres</strong> en Python:
+        </p>
+        <ul>
+          <li><strong>Array (Lista):</strong> estructura que almacena múltiples valores bajo un mismo nombre. En
+            Python
+            se implementa mediante listas <code>[]</code>.</li>
+          <li><strong>Características:</strong> ordenadas, mutables, pueden contener datos homogéneos o heterogéneos.
+          </li>
+          <li><strong>Declaración:</strong> <code>numeros = [10, 20, 30]</code></li>
+          <li><strong>Acceso por índice:</strong> empieza en 0. Ejemplo: <code>numeros[0]</code> devuelve el primer
+            elemento.</li>
+          <li><strong>Recorrido:</strong> con bucles (<code>for n in lista</code> o
+            <code>for i in range(len(lista))</code>).
+          </li>
+          <li><strong>Métodos comunes:</strong> <code>append()</code>, <code>insert()</code>, <code>remove()</code>,
+            <code>pop()</code>, <code>len()</code>.
+          </li>
+          <li><strong>Cadenas de texto (Strings):</strong> secuencias de caracteres inmutables. Se definen con
+            comillas
+            simples o dobles.</li>
+          <li><strong>Operaciones básicas:</strong> <code>len()</code>, concatenación (<code>+</code>), acceso por
+            índice, métodos <code>.lower()</code>, <code>.upper()</code>, <code>.find()</code>, etc.</li>
+          <li><strong>Arrays y cadenas combinados:</strong> listas que contienen textos, como
+            <code>nombres = ["Ana", "Luis", "Marta"]</code>.
+          </li>
+        </ul>
+      </section>
+
+
+      <!-- ======================
         ARRAYS EN PYTHON
   ======================= -->
 
-        <section class="card">
-          <h3>📘 Arrays (Listas) en Python</h3>
-          <ul>
-            <li><strong>Definición:</strong> colección ordenada de elementos.</li>
-            <li><strong>Tipo:</strong> en Python se representan con <code>listas</code>.</li>
-            <li><strong>Características:</strong> ordenadas, mutables, permiten distintos tipos.</li>
-            <li><strong>Índices:</strong> comienzan en <code>0</code> y soportan índices negativos.</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>📘 Arrays (Listas) en Python</h3>
+        <ul>
+          <li><strong>Definición:</strong> colección ordenada de elementos.</li>
+          <li><strong>Tipo:</strong> en Python se representan con <code>listas</code>.</li>
+          <li><strong>Características:</strong> ordenadas, mutables, permiten distintos tipos.</li>
+          <li><strong>Índices:</strong> comienzan en <code>0</code> y soportan índices negativos.</li>
+        </ul>
+      </section>
 
-        <section class="card">
-          <h3>🔧 Declaración y Acceso</h3>
-          <ul>
-            <li><strong>Declaración:</strong> <code>lista = [10, 20, 30]</code></li>
-            <li><strong>Lista vacía:</strong> <code>lista = []</code></li>
-            <li><strong>Acceso:</strong> <code>lista[0]</code> (primer elemento)</li>
-            <li><strong>Acceso negativo:</strong> <code>lista[-1]</code> (último)</li>
-            <li><strong>Modificar:</strong> <code>lista[2] = 99</code></li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🔧 Declaración y Acceso</h3>
+        <ul>
+          <li><strong>Declaración:</strong> <code>lista = [10, 20, 30]</code></li>
+          <li><strong>Lista vacía:</strong> <code>lista = []</code></li>
+          <li><strong>Acceso:</strong> <code>lista[0]</code> (primer elemento)</li>
+          <li><strong>Acceso negativo:</strong> <code>lista[-1]</code> (último)</li>
+          <li><strong>Modificar:</strong> <code>lista[2] = 99</code></li>
+        </ul>
+      </section>
 
-        <section class="card">
-          <h3>🔁 Recorrido de Arrays</h3>
-          <ul>
-            <li><strong>Por índice:</strong> <code>for i in range(len(lista))</code></li>
-            <li><strong>For-each:</strong> <code>for elemento in lista</code></li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🔁 Recorrido de Arrays</h3>
+        <ul>
+          <li><strong>Por índice:</strong> <code>for i in range(len(lista))</code></li>
+          <li><strong>For-each:</strong> <code>for elemento in lista</code></li>
+        </ul>
+      </section>
 
-        <section class="card">
-          <h3>📦 Métodos Importantes</h3>
-          <ul>
-            <li><code>append(x)</code>: añade al final</li>
-            <li><code>insert(pos, x)</code>: inserta en posición</li>
-            <li><code>remove(x)</code>: elimina un elemento</li>
-            <li><code>pop(i)</code>: extrae un elemento por índice</li>
-            <li><code>extend(lista2)</code>: une listas</li>
-            <li><code>len(lista)</code>: longitud</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>📦 Métodos Importantes</h3>
+        <ul>
+          <li><code>append(x)</code>: añade al final</li>
+          <li><code>insert(pos, x)</code>: inserta en posición</li>
+          <li><code>remove(x)</code>: elimina un elemento</li>
+          <li><code>pop(i)</code>: extrae un elemento por índice</li>
+          <li><code>extend(lista2)</code>: une listas</li>
+          <li><code>len(lista)</code>: longitud</li>
+        </ul>
+      </section>
 
-        <!-- ======================
+      <!-- ======================
         OPERACIONES
   ======================= -->
 
-        <section class="card">
-          <h3>✂️ Slicing (División)</h3>
-          <ul>
-            <li><strong>Sintaxis:</strong> <code>lista[inicio:fin:paso]</code></li>
-            <li><strong>Desde inicio:</strong> <code>lista[:3]</code></li>
-            <li><strong>Hasta final:</strong> <code>lista[2:]</code></li>
-            <li><strong>Invertir:</strong> <code>lista[::-1]</code></li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>✂️ Slicing (División)</h3>
+        <ul>
+          <li><strong>Sintaxis:</strong> <code>lista[inicio:fin:paso]</code></li>
+          <li><strong>Desde inicio:</strong> <code>lista[:3]</code></li>
+          <li><strong>Hasta final:</strong> <code>lista[2:]</code></li>
+          <li><strong>Invertir:</strong> <code>lista[::-1]</code></li>
+        </ul>
+      </section>
 
-        <section class="card">
-          <h3>➕ Añadir / Insertar / Unir</h3>
-          <ul>
-            <li><code>append()</code>: añadir elemento al final</li>
-            <li><code>insert()</code>: insertar en una posición</li>
-            <li><code>extend()</code>: unir dos listas</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>➕ Añadir / Insertar / Unir</h3>
+        <ul>
+          <li><code>append()</code>: añadir elemento al final</li>
+          <li><code>insert()</code>: insertar en una posición</li>
+          <li><code>extend()</code>: unir dos listas</li>
+        </ul>
+      </section>
 
-        <section class="card">
-          <h3>➖ Eliminar / Extraer</h3>
-          <ul>
-            <li><code>remove()</code>: elimina por valor</li>
-            <li><code>pop()</code>: elimina y devuelve elemento</li>
-            <li><code>pop(i)</code>: elimina por índice</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>➖ Eliminar / Extraer</h3>
+        <ul>
+          <li><code>remove()</code>: elimina por valor</li>
+          <li><code>pop()</code>: elimina y devuelve elemento</li>
+          <li><code>pop(i)</code>: elimina por índice</li>
+        </ul>
+      </section>
 
-        <!-- ======================
+      <!-- ======================
         BÚSQUEDAS Y ORDENACIÓN
   ======================= -->
 
-        <section class="card">
-          <h3>🔍 Búsqueda en Arrays</h3>
-          <ul>
-            <li><strong>Búsqueda secuencial:</strong> recorre la lista elemento a elemento.</li>
-            <li><strong>Búsqueda binaria:</strong> requiere lista ordenada.</li>
-            <li><strong>Python:</strong> usar <code>in</code> o <code>lista.index()</code>.</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🔍 Búsqueda en Arrays</h3>
+        <ul>
+          <li><strong>Búsqueda secuencial:</strong> recorre la lista elemento a elemento.</li>
+          <li><strong>Búsqueda binaria:</strong> requiere lista ordenada.</li>
+          <li><strong>Python:</strong> usar <code>in</code> o <code>lista.index()</code>.</li>
+        </ul>
+      </section>
 
-        <section class="card">
-          <h3>📊 Ordenación</h3>
-          <ul>
-            <li><code>lista.sort()</code>: modifica la lista original</li>
-            <li><code>sorted(lista)</code>: devuelve una copia ordenada</li>
-            <li><strong>Orden sin mayúsculas:</strong> <code>sorted(lista, key=str.lower)</code></li>
-            <li><strong>Por longitud:</strong> <code>lista.sort(key=len)</code></li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>📊 Ordenación</h3>
+        <ul>
+          <li><code>lista.sort()</code>: modifica la lista original</li>
+          <li><code>sorted(lista)</code>: devuelve una copia ordenada</li>
+          <li><strong>Orden sin mayúsculas:</strong> <code>sorted(lista, key=str.lower)</code></li>
+          <li><strong>Por longitud:</strong> <code>lista.sort(key=len)</code></li>
+        </ul>
+      </section>
 
-        <!-- ======================
+      <!-- ======================
         COMPARACIÓN Y COPIAS
   ======================= -->
 
-        <section class="card">
-          <h3>🔎 Comparación de Arrays</h3>
+      <section class="card">
+        <h3>🔎 Comparación de Arrays</h3>
+        <ul>
+          <li>Dos arrays son iguales si tienen:</li>
           <ul>
-            <li>Dos arrays son iguales si tienen:</li>
-            <ul>
-              <li>Misma longitud</li>
-              <li>Mismos valores</li>
-              <li>En el mismo orden</li>
-            </ul>
-            <li><strong>Python:</strong> <code>lista1 == lista2</code></li>
+            <li>Misma longitud</li>
+            <li>Mismos valores</li>
+            <li>En el mismo orden</li>
           </ul>
-        </section>
+          <li><strong>Python:</strong> <code>lista1 == lista2</code></li>
+        </ul>
+      </section>
 
-        <section class="card">
-          <h3>📎 Copias de Arrays</h3>
+      <section class="card">
+        <h3>📎 Copias de Arrays</h3>
+        <ul>
+          <li><strong>Incorrecto:</strong> <code>copia = original</code></li>
+          <li><strong>Correcto:</strong></li>
           <ul>
-            <li><strong>Incorrecto:</strong> <code>copia = original</code></li>
-            <li><strong>Correcto:</strong></li>
-            <ul>
-              <li><code>copia = original.copy()</code></li>
-              <li><code>copia = original[:]</code></li>
-              <li>Copia manual recorriendo elementos</li>
-            </ul>
+            <li><code>copia = original.copy()</code></li>
+            <li><code>copia = original[:]</code></li>
+            <li>Copia manual recorriendo elementos</li>
           </ul>
-        </section>
+        </ul>
+      </section>
 
-        <!-- ======================
+      <!-- ======================
         MATRICES
   ======================= -->
 
-        <section class="card">
-          <h3>🧱 Arrays Bidimensionales (Matrices)</h3>
-          <ul>
-            <li><strong>Representación:</strong> listas dentro de listas.</li>
-            <li><strong>Acceso:</strong> <code>matriz[fila][columna]</code></li>
-            <li><strong>Recorrido:</strong> bucles anidados</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🧱 Arrays Bidimensionales (Matrices)</h3>
+        <ul>
+          <li><strong>Representación:</strong> listas dentro de listas.</li>
+          <li><strong>Acceso:</strong> <code>matriz[fila][columna]</code></li>
+          <li><strong>Recorrido:</strong> bucles anidados</li>
+        </ul>
+      </section>
 
-        <!-- ======================
+      <!-- ======================
         CADENAS
   ======================= -->
 
+      <section class="card">
+        <h3>🔤 Cadenas de Caracteres</h3>
+        <ul>
+          <li>Secuencia inmutable de caracteres.</li>
+          <li>Se crean con <code>'texto'</code> o <code>"texto"</code>.</li>
+          <li><strong>Indexación:</strong> <code>cadena[0]</code>, <code>cadena[-1]</code></li>
+          <li><strong>Slicing:</strong> <code>cadena[inicio:fin]</code></li>
+          <li><strong>Invertir:</strong> <code>cadena[::-1]</code></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>🛠️ Métodos útiles</h3>
+        <ul>
+          <li><code>upper()</code>, <code>lower()</code></li>
+          <li><code>strip()</code>: eliminar espacios</li>
+          <li><code>split()</code>: dividir texto</li>
+          <li><code>replace(a, b)</code></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>🧵 Formato de Cadenas</h3>
+        <ul>
+          <li><strong>f-strings (recomendado):</strong></li>
+          <li><code>f"Hola {nombre}"</code></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>🧪 Ejercicio 27: Expresiones Regulares</h3>
+        <p>Completa las siguientes tareas identificando el patrón correcto y la función de RegEx de Python a utilizar.
+        </p>
+
+        <table class="regex-table">
+          <thead>
+            <tr>
+              <th>Tarea</th>
+              <th>Patrón RegEx</th>
+              <th>Función a usar</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><strong>A)</strong> Buscar todos los emails<br>(contienen <code>@</code> y <code>.</code>)</td>
+              <td><code>patron = r'\w+\.?\w+@\w+\.\w+'</code></td>
+              <td><code>print(re.findall(patron,data))</code></td>
+            </tr>
+
+            <tr>
+              <td><strong>B)</strong> Buscar fechas con formato DD-MM-AAAA</td>
+              <td><code></code></td>
+              <td><code></code></td>
+            </tr>
+
+            <tr>
+              <td><strong>C)</strong> Buscar el Código de cliente<br>(3 mayúsculas + 6 dígitos)</td>
+              <td><code></code></td>
+              <td><code></code> <code></code></td>
+            </tr>
+
+            <tr>
+              <td><strong>D)</strong> Buscar nombres de archivo que terminan en <code>.py</code></td>
+              <td><code></code></td>
+              <td><code></code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <img src="/images/Nota 2025-11-20 102357.png">
+
+    </details>
+    
+      <details id="tema3" open>
+        <summary>Tema 3: Fundamentos de Java — Apuntes esenciales</summary>
+
         <section class="card">
-          <h3>🔤 Cadenas de Caracteres</h3>
-          <ul>
-            <li>Secuencia inmutable de caracteres.</li>
-            <li>Se crean con <code>'texto'</code> o <code>"texto"</code>.</li>
-            <li><strong>Indexación:</strong> <code>cadena[0]</code>, <code>cadena[-1]</code></li>
-            <li><strong>Slicing:</strong> <code>cadena[inicio:fin]</code></li>
-            <li><strong>Invertir:</strong> <code>cadena[::-1]</code></li>
-          </ul>
+        <h3>🐍 Enlace de Ejercicios Tema 3 en GitHubo</h3>
+        <p>Haz clic en el siguiente enlace para acceder:</p>
+        <a class="github-link"
+          href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint/tema3"
+          target="_blank">
+          <svg class="github-icon" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ..." />
+          </svg> Ver Pseudocódigo en GitHub </a>
         </section>
 
         <section class="card">
-          <h3>🛠️ Métodos útiles</h3>
+          <h3>🔢 Tipos de datos y declaración</h3>
           <ul>
-            <li><code>upper()</code>, <code>lower()</code></li>
-            <li><code>strip()</code>: eliminar espacios</li>
-            <li><code>split()</code>: dividir texto</li>
-            <li><code>replace(a, b)</code></li>
+            <li>Primitivos: <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>,
+              <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code>.</li>
+            <li>Declarar e inicializar: <code>double precio = 2.50;</code>. <strong>Siempre inicializar antes de
+                usar</strong>.</li>
+            <li>Constantes: <code>final double PI = 3.141592;</code>.</li>
           </ul>
         </section>
 
+
         <section class="card">
-          <h3>🧵 Formato de Cadenas</h3>
+          <h3>🔁 Conversión de tipos</h3>
           <ul>
-            <li><strong>f-strings (recomendado):</strong></li>
-            <li><code>f"Hola {nombre}"</code></li>
+            <li>Implícita: de tipo menor a mayor (sin pérdida aparente). Ej: <code>int → double</code>.</li>
+            <li>Explícita (casting): <code>int n = (int) 2.9;</code> (pérdida de información posible).</li>
+          </ul>
+        </section>
+
+
+        <section class="card">
+          <h3>⌨ Entrada y salida</h3>
+          <ul>
+            <li>Salida: <code>System.out.println("texto")</code>.</li>
+            <li>Entrada (Scanner):
+              <div class="small"><code>Scanner sc = new Scanner(System.in); int n = sc.nextInt();</code></div>
+            </li>
+          </ul>
+        </section>
+
+
+        <section class="card">
+          <h3>➕ Operadores clave</h3>
+          <ul>
+            <li>Aritméticos: <code>+ - * / %</code></li>
+            <li>Relacionales: <code>== != &gt; &lt; &gt;= &lt;=</code></li>
+            <li>Lógicos: <code>&& || !</code> (evaluación perezosa)</li>
+            <li>Ternario: <code>cond ? valor1 : valor2</code></li>
+          </ul>
+        </section>
+
+
+        <section class="card">
+          <h3>🔀 Control de flujo</h3>
+          <ul>
+            <li><strong>Condicionales:</strong> <code>if</code>, <code>if-else</code>, <code>if-else if</code>,
+              <code>switch</code>.</li>
+            <li><strong>Bucle for:</strong> contador conocido. <code>for (int i=0;i&lt;n;i++)</code>.</li>
+            <li><strong>Bucle while:</strong> condición.
+            <li><strong>do-while:</strong> ejecuta al menos una vez.</li>
+            <li>Bucles anidados para matrices/tareas repetidas.</li>
+          </ul>
+        </section>
+
+
+        <section class="card">
+          <h3>🧩 Funciones / Métodos</h3>
+          <ul>
+            <li>Método = bloque reutilizable. Sintaxis:
+              <div class="small"><code>static tipo nombre(tipo param){ ... }</code></div>
+            </li>
+            <li>Parámetros por valor: los cambios dentro del método no alteran la variable externa.</li>
+            <li>Devolver valor con <code>return</code>; también existen procedimientos (<code>void</code>).</li>
+            <li>Sobrecarga: mismo nombre, distinta firma (nº/tipo de parámetros).</li>
+          </ul>
+        </section>
+
+
+        <section class="card">
+          <h3>📝 Ejercicios esenciales (práctica mínima)</h3>
+          <ul>
+            <li>Pide un número y muestra si es par, positivo y su cuadrado (repetir hasta 0).</li>
+            <li>Calcula la media de tres notas y muestra parte entera y decimal.</li>
+            <li>Implementa una función que devuelva el máximo de dos enteros y otra que calcule factorial con
+              <code>for</code>.</li>
+            <li>Dibuja un triángulo de asteriscos para un <code>n</code> dado (bucles anidados).</li>
+          </ul>
+        </section>
+
+
+        <section class="card">
+          <h3>✅ Resumen rápido</h3>
+          <ul>
+            <li>Java = <strong>compilar</strong> + <strong>JVM</strong>. Entender este flujo es fundamental.</li>
+            <li>Conocer tipos, declaración, casting y convenciones de nombres.</li>
+            <li>Control de flujo (condicionales/bucles) y métodos son herramientas esenciales antes de POO.</li>
           </ul>
         </section>
 
@@ -613,6 +764,5 @@
       </footer>
 
 </body>
-
 
 </html>
