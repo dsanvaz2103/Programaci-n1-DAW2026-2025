@@ -155,6 +155,8 @@
     <a href="#tema1">Tema 1: Clasificación de los Lenguajes</a>
     <a href="#tema2">Tema 2: Arrays y Cadenas en Python</a>
     <a href="#tema3">Tema 3: Fundamentos de Java — Apuntes esenciales</a>
+    <a href="#tema4">Tema 4: Programación Orientada a Objetos — Clases y Objetos</a>
+    <a href="#tema5">Tema 5: POO(Programacion Orientada a Onjetos)</a>
   </nav>
 
   <main id="inicio">
@@ -652,116 +654,315 @@
       <img src="/images/Nota 2025-11-20 102357.png">
 
     </details>
-    
-      <details id="tema3" open>
-        <summary>Tema 3: Fundamentos de Java — Apuntes esenciales</summary>
 
-        <section class="card">
+    <details id="tema3" open>
+      <summary>Tema 3: Fundamentos de Java — Apuntes esenciales</summary>
+
+      <section class="card">
         <h3>🐍 Enlace de Ejercicios Tema 3 en GitHubo</h3>
         <p>Haz clic en el siguiente enlace para acceder:</p>
         <a class="github-link"
-          href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Pseint/Pseint/tema3"
+          href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema3"
           target="_blank">
           <svg class="github-icon" viewBox="0 0 24 24">
             <path d="M12 .297c-6.63 0-12 5.373-12 12 ..." />
           </svg> Ver Pseudocódigo en GitHub </a>
-        </section>
+      </section>
 
-        <section class="card">
-          <h3>🔢 Tipos de datos y declaración</h3>
-          <ul>
-            <li>Primitivos: <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>,
-              <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code>.</li>
-            <li>Declarar e inicializar: <code>double precio = 2.50;</code>. <strong>Siempre inicializar antes de
-                usar</strong>.</li>
-            <li>Constantes: <code>final double PI = 3.141592;</code>.</li>
-          </ul>
-        </section>
-
-
-        <section class="card">
-          <h3>🔁 Conversión de tipos</h3>
-          <ul>
-            <li>Implícita: de tipo menor a mayor (sin pérdida aparente). Ej: <code>int → double</code>.</li>
-            <li>Explícita (casting): <code>int n = (int) 2.9;</code> (pérdida de información posible).</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🔢 Tipos de datos y declaración</h3>
+        <ul>
+          <li>Primitivos: <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>,
+            <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code>.
+          </li>
+          <li>Declarar e inicializar: <code>double precio = 2.50;</code>. <strong>Siempre inicializar antes de
+              usar</strong>.</li>
+          <li>Constantes: <code>final double PI = 3.141592;</code>.</li>
+        </ul>
+      </section>
 
 
-        <section class="card">
-          <h3>⌨ Entrada y salida</h3>
-          <ul>
-            <li>Salida: <code>System.out.println("texto")</code>.</li>
-            <li>Entrada (Scanner):
-              <div class="small"><code>Scanner sc = new Scanner(System.in); int n = sc.nextInt();</code></div>
-            </li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🔁 Conversión de tipos</h3>
+        <ul>
+          <li>Implícita: de tipo menor a mayor (sin pérdida aparente). Ej: <code>int → double</code>.</li>
+          <li>Explícita (casting): <code>int n = (int) 2.9;</code> (pérdida de información posible).</li>
+        </ul>
+      </section>
 
 
-        <section class="card">
-          <h3>➕ Operadores clave</h3>
-          <ul>
-            <li>Aritméticos: <code>+ - * / %</code></li>
-            <li>Relacionales: <code>== != &gt; &lt; &gt;= &lt;=</code></li>
-            <li>Lógicos: <code>&& || !</code> (evaluación perezosa)</li>
-            <li>Ternario: <code>cond ? valor1 : valor2</code></li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>⌨ Entrada y salida</h3>
+        <ul>
+          <li>Salida: <code>System.out.println("texto")</code>.</li>
+          <li>Entrada (Scanner):
+            <div class="small"><code>Scanner sc = new Scanner(System.in); int n = sc.nextInt();</code></div>
+          </li>
+        </ul>
+      </section>
 
 
-        <section class="card">
-          <h3>🔀 Control de flujo</h3>
-          <ul>
-            <li><strong>Condicionales:</strong> <code>if</code>, <code>if-else</code>, <code>if-else if</code>,
-              <code>switch</code>.</li>
-            <li><strong>Bucle for:</strong> contador conocido. <code>for (int i=0;i&lt;n;i++)</code>.</li>
-            <li><strong>Bucle while:</strong> condición.
-            <li><strong>do-while:</strong> ejecuta al menos una vez.</li>
-            <li>Bucles anidados para matrices/tareas repetidas.</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>➕ Operadores clave</h3>
+        <ul>
+          <li>Aritméticos: <code>+ - * / %</code></li>
+          <li>Relacionales: <code>== != &gt; &lt; &gt;= &lt;=</code></li>
+          <li>Lógicos: <code>&& || !</code> (evaluación perezosa)</li>
+          <li>Ternario: <code>cond ? valor1 : valor2</code></li>
+        </ul>
+      </section>
 
 
-        <section class="card">
-          <h3>🧩 Funciones / Métodos</h3>
-          <ul>
-            <li>Método = bloque reutilizable. Sintaxis:
-              <div class="small"><code>static tipo nombre(tipo param){ ... }</code></div>
-            </li>
-            <li>Parámetros por valor: los cambios dentro del método no alteran la variable externa.</li>
-            <li>Devolver valor con <code>return</code>; también existen procedimientos (<code>void</code>).</li>
-            <li>Sobrecarga: mismo nombre, distinta firma (nº/tipo de parámetros).</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🔀 Control de flujo</h3>
+        <ul>
+          <li><strong>Condicionales:</strong> <code>if</code>, <code>if-else</code>, <code>if-else if</code>,
+            <code>switch</code>.
+          </li>
+          <li><strong>Bucle for:</strong> contador conocido. <code>for (int i=0;i&lt;n;i++)</code>.</li>
+          <li><strong>Bucle while:</strong> condición.
+          <li><strong>do-while:</strong> ejecuta al menos una vez.</li>
+          <li>Bucles anidados para matrices/tareas repetidas.</li>
+        </ul>
+      </section>
 
 
-        <section class="card">
-          <h3>📝 Ejercicios esenciales (práctica mínima)</h3>
-          <ul>
-            <li>Pide un número y muestra si es par, positivo y su cuadrado (repetir hasta 0).</li>
-            <li>Calcula la media de tres notas y muestra parte entera y decimal.</li>
-            <li>Implementa una función que devuelva el máximo de dos enteros y otra que calcule factorial con
-              <code>for</code>.</li>
-            <li>Dibuja un triángulo de asteriscos para un <code>n</code> dado (bucles anidados).</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>🧩 Funciones / Métodos</h3>
+        <ul>
+          <li>Método = bloque reutilizable. Sintaxis:
+            <div class="small"><code>static tipo nombre(tipo param){ ... }</code></div>
+          </li>
+          <li>Parámetros por valor: los cambios dentro del método no alteran la variable externa.</li>
+          <li>Devolver valor con <code>return</code>; también existen procedimientos (<code>void</code>).</li>
+          <li>Sobrecarga: mismo nombre, distinta firma (nº/tipo de parámetros).</li>
+        </ul>
+      </section>
 
 
-        <section class="card">
-          <h3>✅ Resumen rápido</h3>
-          <ul>
-            <li>Java = <strong>compilar</strong> + <strong>JVM</strong>. Entender este flujo es fundamental.</li>
-            <li>Conocer tipos, declaración, casting y convenciones de nombres.</li>
-            <li>Control de flujo (condicionales/bucles) y métodos son herramientas esenciales antes de POO.</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h3>📝 Ejercicios esenciales (práctica mínima)</h3>
+        <ul>
+          <li>Pide un número y muestra si es par, positivo y su cuadrado (repetir hasta 0).</li>
+          <li>Calcula la media de tres notas y muestra parte entera y decimal.</li>
+          <li>Implementa una función que devuelva el máximo de dos enteros y otra que calcule factorial con
+            <code>for</code>.
+          </li>
+          <li>Dibuja un triángulo de asteriscos para un <code>n</code> dado (bucles anidados).</li>
+        </ul>
+      </section>
 
-      </details>
 
-      <footer>
-        &copy; 2025/2026 Mi Portafolio de Programación
-      </footer>
+      <section class="card">
+        <h3>✅ Resumen rápido</h3>
+        <ul>
+          <li>Java = <strong>compilar</strong> + <strong>JVM</strong>. Entender este flujo es fundamental.</li>
+          <li>Conocer tipos, declaración, casting y convenciones de nombres.</li>
+          <li>Control de flujo (condicionales/bucles) y métodos son herramientas esenciales antes de POO.</li>
+        </ul>
+      </section>
+
+    </details>
+      <!-- ======================
+        Tema4
+  ======================= -->
+    <details id="tema4" open>
+      <summary>Tema 4: Programación Orientada a Objetos — Clases y Objetos</summary>
+
+      <section class="card">
+        <h3>🎯 Objetivos del Tema</h3>
+        <ul>
+          <li>Comprender los conceptos de <strong>clase</strong> y <strong>objeto</strong>.</li>
+          <li>Crear clases identificando correctamente atributos y métodos.</li>
+          <li>Instanciar y utilizar objetos en programas Java.</li>
+          <li>Utilizar constructores y referencias a objetos.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>💻 Ejercicios desarrollados en clase</h3>
+        <p>
+          Los ejercicios realizados y corregidos durante las clases se encuentran disponibles
+          en el repositorio de GitHub:
+        </p>
+        <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema4" target="_blank">
+          <svg class="github-icon" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ..." />
+          </svg>
+          Ver ejercicios Unidad 4 en GitHub
+        </a>
+      </section>
+
+      
+
+      <section class="card">
+        <h3>🏗️ ¿Qué es una Clase?</h3>
+        <p>
+          Una <strong>clase</strong> es una plantilla que permite modelar objetos del mundo real.
+          Define sus <strong>datos (atributos)</strong> y su <strong>comportamiento (métodos)</strong>.
+        </p>
+        <p>Ejemplo:</p>
+        <pre><code>
+class Persona {
+  String nombre;
+  int edad;
+}
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>📦 Atributos</h3>
+        <ul>
+          <li>Representan la información o estado del objeto.</li>
+          <li>Suelen ser <strong>sustantivos</strong> y usar <code>lowerCamelCase</code>.</li>
+          <li>Se recomienda visibilidad <code>private</code>.</li>
+        </ul>
+        <p>Ejemplo:</p>
+        <pre><code>
+private String nombre;
+private int edad;
+private double estatura;
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>⚙️ Métodos</h3>
+        <p>
+          Los métodos son funciones definidas dentro de una clase que describen el comportamiento del objeto.
+        </p>
+        <ul>
+          <li>Suelen llevar un <strong>verbo</strong> en el nombre.</li>
+          <li>Pueden modificar atributos del objeto.</li>
+        </ul>
+        <p>Ejemplo:</p>
+        <pre><code>
+void cumplirAnios() {
+  edad++;
+}
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>🧩 Objetos</h3>
+        <p>
+          Un <strong>objeto</strong> es una instancia de una clase.
+          Cada objeto tiene sus propios valores para los atributos.
+        </p>
+        <p>Ejemplo de creación de objetos:</p>
+        <pre><code>
+Persona p1 = new Persona();
+Persona p2 = new Persona();
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>🔗 Operador punto (<code>.</code>)</h3>
+        <p>
+          Se utiliza para acceder a los atributos y métodos de un objeto.
+        </p>
+        <pre><code>
+p1.nombre = "Ana";
+p1.cumplirAnios();
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>🧠 Referencia <code>this</code></h3>
+        <p>
+          La palabra reservada <code>this</code> hace referencia al propio objeto y se usa para
+          diferenciar atributos de variables locales.
+        </p>
+        <pre><code>
+void setEdad(int edad) {
+  this.edad = edad;
+}
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>🏗️ Constructores</h3>
+        <p>
+          Los <strong>constructores</strong> son métodos especiales que se ejecutan al crear un objeto.
+          Sirven para inicializar sus atributos.
+        </p>
+        <p>Ejemplo:</p>
+        <pre><code>
+Persona(String nombre, int edad) {
+  this.nombre = nombre;
+  this.edad = edad;
+}
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>🔁 Tipos de Constructores</h3>
+        <ul>
+          <li><strong>Por defecto:</strong> si no se define ninguno.</li>
+          <li><strong>Sin parámetros:</strong> inicializa valores estándar.</li>
+          <li><strong>Con parámetros:</strong> permite personalizar el objeto.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>🚨 Referencias y null</h3>
+        <ul>
+          <li>Los objetos se manejan mediante referencias.</li>
+          <li>Una referencia puede valer <code>null</code>.</li>
+          <li>Acceder a un objeto <code>null</code> produce <code>NullPointerException</code>.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>📘 Enumerados (enum)</h3>
+        <p>
+          Un <strong>enumerado</strong> define un conjunto limitado de valores posibles.
+        </p>
+        <pre><code>
+enum Sexo {
+  HOMBRE, MUJER, NO_BINARIO
+}
+    </code></pre>
+      </section>
+
+      <section class="card">
+        <h3>📝 Resumen del Tema</h3>
+        <ul>
+          <li>La POO permite modelar el mundo real mediante clases y objetos.</li>
+          <li>Las clases definen atributos y métodos.</li>
+          <li>Los objetos son instancias creadas con <code>new</code>.</li>
+          <li>Los constructores inicializan los objetos.</li>
+          <li>El uso correcto de referencias es clave en Java.</li>
+        </ul>
+      </section>
+
+    </details>
+
+
+    <!-- =========================
+         TEMA 5
+    ========================== -->
+    <details id="tema5" open>
+      <summary>Tema 5: POO(Programacion Orientada a Onjetos)</summary>
+
+      <section class="card">
+        <h3>💻 Ejercicios desarrollados en clase</h3>
+        <p>
+          Los ejercicios realizados y corregidos durante las clases se encuentran disponibles
+          en el repositorio de GitHub:
+        </p>
+        <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema5" target="_blank">
+          <svg class="github-icon" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ..." />
+          </svg>
+          Ver ejercicios Unidad 5 en GitHub
+        </a>
+      </section>
+    </details>
+
+    <footer>
+      &copy; 2025/2026 Mi Portafolio de Programación
+    </footer>
+
 
 </body>
 
