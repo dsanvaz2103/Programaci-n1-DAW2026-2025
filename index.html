@@ -942,22 +942,75 @@ enum Sexo {
          TEMA 5
     ========================== -->
     <details id="tema5" open>
-      <summary>Tema 5: POO(Programacion Orientada a Onjetos)</summary>
+  <summary>Tema 5: Principios de la POO (Encapsulación, Herencia y Polimorfismo)</summary>
 
-      <section class="card">
-        <h3>💻 Ejercicios desarrollados en clase</h3>
-        <p>
-          Los ejercicios realizados y corregidos durante las clases se encuentran disponibles
-          en el repositorio de GitHub:
-        </p>
-        <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema5" target="_blank">
-          <svg class="github-icon" viewBox="0 0 24 24">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 ..." />
-          </svg>
-          Ver ejercicios Unidad 5 en GitHub
-        </a>
-      </section>
-    </details>
+  <section class="card">
+    <h3>🚀 Introducción a la UD5</h3>
+    <p>En este tema profundizamos en los pilares que hacen de la POO un paradigma potente para el desarrollo de software a gran escala. Nos enfocamos en cómo proteger los datos y reutilizar el código de forma eficiente.</p>
+    <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema5/Tema5" target="_blank">
+      <svg class="github-icon" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+      </svg>
+      Ver ejercicios Unidad 5 en GitHub
+    </a>
+  </section>
+
+  <section class="card">
+    <h3>🛡️ 1. Encapsulación y Visibilidad</h3>
+    <p>Consiste en ocultar el estado interno de un objeto y obligar a que toda interacción se realice a través de métodos públicos. Esto protege la integridad de los datos.</p>
+    <ul>
+      <li><code>private</code>: Solo accesible dentro de la propia clase.</li>
+      <li><code>protected</code>: Accesible en la propia clase, el mismo paquete y subclases.</li>
+      <li><code>public</code>: Accesible desde cualquier lugar.</li>
+      <li><strong>Getters y Setters:</strong> Métodos estándar para leer y modificar atributos privados con validación.</li>
+    </ul>
+    
+  </section>
+
+  <section class="card">
+    <h3>🌳 2. Herencia (Extends)</h3>
+    <p>Permite crear nuevas clases basadas en clases existentes, heredando sus atributos y métodos. Facilita enormemente la reutilización de código.</p>
+    <ul>
+      <li><strong>Superclase:</strong> La clase de la que se hereda (ej. <code>Animal</code>).</li>
+      <li><strong>Subclase:</strong> La clase que hereda (ej. <code>Perro</code>).</li>
+      <li>Uso de <code>super()</code> para llamar al constructor de la madre.</li>
+    </ul>
+    
+  </section>
+
+  <section class="card">
+    <h3>🎭 3. Polimorfismo y Sobrescritura</h3>
+    <p>Es la capacidad de un objeto de tomar múltiples formas. Una referencia de tipo "Padre" puede apuntar a un objeto "Hijo".</p>
+    <ul>
+      <li><strong>Sobrescritura (@Override):</strong> Redefinir un método de la madre en la hija para que haga algo específico.</li>
+      <li><strong>Ligadura Dinámica:</strong> Java decide en tiempo de ejecución qué método ejecutar según el tipo real del objeto, no de la referencia.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>🏗️ 4. Clases y Métodos Abstractos</h3>
+    <p>Se utilizan cuando queremos definir un "concepto" pero no una "implementación" concreta.</p>
+    <ul>
+      <li><strong>Clase Abstracta:</strong> No se puede instanciar (usar <code>new</code>).</li>
+      <li><strong>Método Abstracto:</strong> No tiene cuerpo; obliga a las clases hijas a implementarlo.</li>
+    </ul>
+    
+  </section>
+
+  <section class="card">
+    <h3>🔒 5. Modificador Final</h3>
+    <ul>
+      <li><strong>Variable final:</strong> Se convierte en una constante.</li>
+      <li><strong>Método final:</strong> No puede ser sobrescrito por las hijas.</li>
+      <li><strong>Clase final:</strong> No puede tener descendencia (no se puede heredar de ella).</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="reflection"><strong>Reflexión:</strong> ¿Por qué es importante el polimorfismo en sistemas grandes?</p>
+    <p>Permite que el sistema sea extensible. Podemos añadir nuevas funcionalidades (nuevos tipos de objetos) sin tener que modificar el código que ya funciona, cumpliendo con el principio de abierto/cerrado.</p>
+  </section>
+</details>
 
     <footer>
       &copy; 2025/2026 Mi Portafolio de Programación
