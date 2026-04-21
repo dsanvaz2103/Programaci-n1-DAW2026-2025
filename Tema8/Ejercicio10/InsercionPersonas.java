@@ -5,25 +5,28 @@ import java.util.*;
 
 public class InsercionPersonas {
     public static void main(String[] args) {
-        // TreeSet usa el compareTo de Persona para ordenar y evitar duplicados
-        Set<Persona> personas = new TreeSet<>();
+        List<Persona> lista = new ArrayList<>();
+        lista.add(new Persona("David", "Sanchez", 21));
+        lista.add(new Persona("Yael", "Garcia", 12));
+        lista.add(new Persona("Alvaro", "Perez", 20));
+        lista.add(new Persona("SinApellido", null, 30)); // Para probar la ampliación
 
-        personas.add(new Persona("David", "Sanchez", 21));
-        personas.add(new Persona("Pablo", "Jimenez", 26));
-        personas.add(new Persona("Juan", "Vazquez", 25));
-        personas.add(new Persona("Luis", "Rosado", 31));
-        personas.add(new Persona("Isabel", "Martinez", 27));
-        personas.add(new Persona("Fran", "Gomez", 40));
-        personas.add(new Persona("Yael", "Garcia", 12));
-        personas.add(new Persona("Alvaro", "Perez", 20));
-        personas.add(new Persona("Alejandro", "Gonzalez", 29));
+        // 1. Ordenar por Edad
+        System.out.println("\n--- Ordenado por Edad ---");
+        lista.sort(new ComparadoresPersona.CompararEdad());
+        System.out.println(lista);
 
-        // Intento de añadir duplicado (no se añadirá porque compareTo devolverá 0 por el nombre)
-        personas.add(new Persona("David", "Otro Apellido", 50));
+        // 2. Ordenar por Apellidos
+        System.out.println("\n--- Ordenado por Apellidos ---");
+        // Usamos una lambda para variar (opcional)
+        lista.sort(Comparator.comparing(Persona::getApellidos, Comparator.nullsFirst(String::compareTo)));
+        System.out.println(lista);
 
-        System.out.println("Contenido del TreeSet (Orden Natural por Nombre):");
-        for (Persona p : personas) {
-            System.out.println(p);
-        }
+        // 3. Ordenar por Apellido, Nombre y Edad (Ampliación incluida)
+        System.out.println("\n--- Ordenado por Apellido > Nombre > Edad (Nulls first) ---");
+        lista.sort(new ComparadoresPersona.CompararTodo());
+        System.out.println(lista);
     }
+
+
 }
