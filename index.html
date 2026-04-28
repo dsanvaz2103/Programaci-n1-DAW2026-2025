@@ -157,6 +157,9 @@
     <a href="#tema3">Tema 3: Fundamentos de Java — Apuntes esenciales</a>
     <a href="#tema4">Tema 4: Programación Orientada a Objetos — Clases y Objetos</a>
     <a href="#tema5">Tema 5: POO(Programacion Orientada a Onjetos)</a>
+    <a href="#tema6">Tema 6: Interfaces</a>
+    <a href="#tema7">Tema 7: Excepciones</a>
+    <a href="#tema8">Tema 8: Colecciones (JCF) y Tipos Abstractos de Datos</a>
   </nav>
 
   <main id="inicio">
@@ -1012,10 +1015,244 @@ enum Sexo {
   </section>
 </details>
 
+<details id="tema6" open>
+  <summary>Tema 6: Interfaces</summary>
+
+  <section class="card">
+    <h3>🔗 Introducción a la UD6</h3>
+    <p>En esta unidad exploramos las interfaces, un mecanismo fundamental en Java para establecer contratos de comportamiento y permitir que clases de diferentes jerarquías compartan capacidades comunes.</p>
+    <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema6" target="_blank">
+      <svg class="github-icon" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+      </svg>
+      Ver ejercicios Unidad 6 en GitHub
+    </a>
+  </section>
+
+  <section class="card">
+    <h3>📜 1. El Concepto de Interfaz</h3>
+    <p>Una interfaz es un "contrato" que indica <strong>qué</strong> debe hacer una clase, pero no <strong>cómo</strong> hacerlo. Es el nivel máximo de abstracción en Java.</p>
+    <ul>
+      <li>No tienen estado (no guardan datos variables, solo constantes).</li>
+      <li>No se pueden instanciar (no puedes hacer <code>new</code> de una interfaz).</li>
+      <li>Las clases "implementan" interfaces usando la palabra reservada <code>implements</code>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>⚙️ 2. Componentes de una Interfaz</h3>
+    <p>Por defecto, Java asume ciertos modificadores para ahorrar código y mantener la limpieza:</p>
+    <ul>
+      <li><strong>Métodos:</strong> Son implícitamente <code>public abstract</code>. Solo definen la firma.</li>
+      <li><strong>Constantes:</strong> Son implícitamente <code>public static final</code>.</li>
+      <li><strong>Métodos Default (Java 8+):</strong> Permiten añadir lógica por defecto sin romper las clases que ya implementaban la interfaz.</li>
+      <li><strong>Métodos Static:</strong> Métodos de utilidad que pertenecen a la propia interfaz.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>🧬 3. Herencia Múltiple de Tipo</h3>
+    <p>A diferencia de las clases (donde solo puedes heredar de una), Java permite que una clase implemente <strong>infinitas interfaces</strong>.</p>
+    <pre><code>
+public class RobotDomestico implements InteligenciaArtificial, Electrodomestico {
+    // Debe implementar los métodos de AMBAS interfaces
+}
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>🎭 4. Interfaces y Polimorfismo</h3>
+    <p>Es la mejor práctica de diseño: <strong>Declarar con la interfaz y crear con la clase</strong>. Esto permite cambiar la implementación fácilmente sin romper el resto del programa.</p>
+    <pre><code>
+// Recomendado:
+Vehiculo miCoche = new Coche();
+miCoche.acelerar(20);
+
+// Esto permite que luego puedas hacer:
+miCoche = new Moto(); // Sigue funcionando porque ambos son Vehículos
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>⚖️ 5. Interfaz vs Clase Abstracta</h3>
+    <p>¿Cuándo usar cada una?</p>
+    <ul>
+      <li><strong>Clase Abstracta:</strong> Cuando hay una relación clara de "es un" (ej. Un Perro <em>es un</em> Animal). Se comparte código y atributos.</li>
+      <li><strong>Interfaz:</strong> Cuando hay una relación de "es capaz de" (ej. Un Coche <em>es capaz de</em> de ser Remolcable). Une objetos que no tienen nada que ver entre sí.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="reflection"><strong>Reflexión:</strong> ¿Cuál es la mayor ventaja de las interfaces?</p>
+    <p>La flexibilidad. Permiten desacoplar el código: el programa sabe qué esperar de un objeto (el contrato) sin importarle quién sea ese objeto o cómo funcione internamente.</p>
+  </section>
+</details>
+
+<details id="tema7" open>
+  <summary>Tema 7: Control y Manejo de Excepciones</summary>
+
+  <section class="card">
+    <h3>⚠️ Introducción a la UD7</h3>
+    <p>Una excepción es un evento que ocurre durante la ejecución de un programa y que interrumpe su flujo normal de instrucciones. Aprender a manejarlas es vital para crear aplicaciones robustas y "a prueba de fallos".</p>
+    <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema7" target="_blank">
+      <svg class="github-icon" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+      </svg>
+      Ver ejercicios Unidad 7 en GitHub
+    </a>
+  </section>
+
+  <section class="card">
+    <h3>🏗️ 1. Jerarquía de Excepciones</h3>
+    <p>En Java, todas las excepciones derivan de la clase <code>Throwable</code>. Se dividen principalmente en dos grupos:</p>
+    <ul>
+      <li><strong>Error:</strong> Problemas graves del sistema (ej. <code>StackOverflowError</code>). No se deben capturar.</li>
+      <li><strong>Exception:</strong> Problemas que la aplicación puede manejar.
+        <ul>
+          <li><strong>Checked:</strong> Obligatorio gestionarlas (ej. <code>IOException</code>).</li>
+          <li><strong>Unchecked (Runtime):</strong> Errores de lógica (ej. <code>NullPointerException</code>, <code>ArithmeticException</code>).</li>
+        </ul>
+      </li>
+    </ul>
+    
+  </section>
+
+  <section class="card">
+    <h3>🛡️ 2. El bloque Try-Catch-Finally</h3>
+    <p>Es la estructura fundamental para capturar errores y evitar que el programa se cierre inesperadamente.</p>
+    <ul>
+      <li><code>try</code>: Código que puede lanzar una excepción.</li>
+      <li><code>catch</code>: Código que se ejecuta si ocurre el error.</li>
+      <li><code>finally</code>: Código que se ejecuta siempre (útil para cerrar archivos o bases de datos).</li>
+    </ul>
+    <pre><code>
+try {
+    int resultado = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("¡No puedes dividir por cero!");
+} finally {
+    System.out.println("Limpieza de recursos...");
+}
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>📤 3. Lanzamiento y Propagación (Throw/Throws)</h3>
+    <p>A veces no queremos manejar el error en el método actual, sino avisar a quien llamó al método.</p>
+    <ul>
+      <li><code>throw</code>: Lanza una excepción de forma manual.</li>
+      <li><code>throws</code>: Se usa en la firma del método para indicar que este puede lanzar una excepción.</li>
+    </ul>
+    <pre><code>
+public void validarEdad(int edad) throws Exception {
+    if (edad < 18) {
+        throw new Exception("Menor de edad no permitido");
+    }
+}
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>✨ 4. Buenas Prácticas</h3>
+    <p>Para escribir código profesional con excepciones debemos seguir estos principios:</p>
+    <ul>
+      <li><strong>No captures Exception:</strong> Sé lo más específico posible (ej. usa <code>FileNotFoundException</code> en vez de <code>Exception</code>).</li>
+      <li><strong>No dejes el catch vacío:</strong> Al menos imprime el error para saber qué ha pasado.</li>
+      <li><strong>Cierra recursos:</strong> Usa el bloque <code>finally</code> o <code>try-with-resources</code>.</li>
+      <li><strong>Crea tus propias excepciones:</strong> Si la lógica de tu negocio lo requiere (ej. <code>SaldoInsuficienteException</code>).</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="reflection"><strong>Reflexión:</strong> ¿Por qué es mejor lanzar una excepción que devolver un valor de error (como -1)?</p>
+    <p>Porque las excepciones no se pueden ignorar fácilmente. Obligan al programador a decidir cómo manejar el error o a propagarlo, mientras que un valor de retorno puede pasar desapercibido y causar errores más graves adelante.</p>
+  </section>
+</details>
+
+<details id="tema8" open>
+  <summary>Tema 8: Colecciones (JCF) y Tipos Abstractos de Datos</summary>
+
+  <section class="card">
+    <h3>📚 Introducción a la UD8</h3>
+    <p>El Java Collections Framework (JCF) es un conjunto de interfaces y clases que permiten almacenar y manipular grupos de objetos de forma eficiente. En lugar de usar arrays fijos, usamos estructuras dinámicas que crecen según nuestras necesidades.</p>
+    <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema8" target="_blank">
+      <svg class="github-icon" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 ..."/>
+      </svg>
+      Ver ejercicios Unidad 8 en GitHub
+    </a>
+  </section>
+
+  <section class="card">
+    <h3>🏗️ 1. Jerarquía de la Interfaz Collection</h3>
+    <p>Casi todas las colecciones heredan de <code>Collection</code>. Las tres ramas principales son:</p>
+    <ul>
+      <li><strong>List (Listas):</strong> Permiten elementos duplicados y mantienen el orden de inserción. (ej. <code>ArrayList</code>, <code>LinkedList</code>).</li>
+      <li><strong>Set (Conjuntos):</strong> No permiten duplicados. Ideales para colecciones de elementos únicos. (ej. <code>HashSet</code>, <code>TreeSet</code>).</li>
+      <li><strong>Queue (Colas):</strong> Diseñadas para procesar elementos en un orden específico (FIFO).</li>
+    </ul>
+    
+  </section>
+
+  <section class="card">
+    <h3>🗺️ 2. Mapas (Key-Value)</h3>
+    <p>Los mapas no heredan de <code>Collection</code>. Almacenan parejas de <strong>clave-valor</strong>. Cada clave es única y apunta a un valor.</p>
+    <ul>
+      <li><strong>HashMap:</strong> Rápido, no garantiza orden.</li>
+      <li><strong>TreeMap:</strong> Mantiene las claves ordenadas de forma natural.</li>
+      <li><strong>LinkedHashMap:</strong> Mantiene el orden de inserción de las claves.</li>
+    </ul>
+    <pre><code>
+Map&lt;String, Integer&gt; edades = new HashMap&lt;&gt;();
+edades.put("Ana", 25);
+edades.put("Luis", 30);
+System.out.println(edades.get("Ana")); // Imprime 25
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>🔄 3. Iteración y Genéricos</h3>
+    <p>Para recorrer colecciones de forma segura usamos el bucle for-each o Iteradores. Los <strong>Genéricos</strong> <code>&lt;T&gt;</code> aseguran que la colección solo contenga el tipo de dato especificado.</p>
+    <pre><code>
+List&lt;String&gt; nombres = new ArrayList&lt;&gt;();
+nombres.add("Java");
+nombres.add("Python");
+
+for (String nombre : nombres) {
+    System.out.println(nombre);
+}
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>🛠️ 4. La clase útil Collections</h3>
+    <p>Java proporciona la clase <code>java.util.Collections</code> con métodos estáticos para operar sobre las colecciones:</p>
+    <ul>
+      <li><code>sort(lista)</code>: Ordena los elementos.</li>
+      <li><code>shuffle(lista)</code>: Desordena los elementos aleatoriamente.</li>
+      <li><code>reverse(lista)</code>: Invierte el orden.</li>
+      <li><code>max(col)</code> / <code>min(col)</code>: Encuentra el valor mayor o menor.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>⚖️ 5. Comparable vs Comparator</h3>
+    <p>Para ordenar objetos personalizados (como una lista de Alumnos):</p>
+    <ul>
+      <li><strong>Comparable:</strong> Define el orden natural de la propia clase (método <code>compareTo</code>).</li>
+      <li><strong>Comparator:</strong> Define órdenes alternativos de forma externa (ej. ordenar por nombre o por nota).</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="reflection"><strong>Reflexión:</strong> ¿Cuándo usaría un HashSet en lugar de un ArrayList?</p>
+    <p>Usaría un HashSet cuando la prioridad sea evitar duplicados y necesite una búsqueda muy rápida, ya que el ArrayList permite repetidos y es más lento para comprobar si un elemento ya existe en listas muy grandes.</p>
+  </section>
+</details>
+
     <footer>
       &copy; 2025/2026 Mi Portafolio de Programación
     </footer>
-
 
 </body>
 
