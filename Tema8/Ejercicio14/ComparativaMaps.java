@@ -1,6 +1,11 @@
-package UD8.Ejercicio14;
+package Tema8;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.Iterator;
+
 
 public class ComparativaMaps {
 
@@ -26,7 +31,7 @@ public class ComparativaMaps {
         mostrarMapa(alfabetico, "TreeMap (Orden natural/alfabético)");
     }
 
-    public static void mostrarMapa(Map<String, Integer> mapa, String tipo) {
+    private static void mostrarMapa(Map<String, Integer> mapa, String tipo) {
         System.out.println("--- " + tipo + " ---");
 
         // Obtención del Iterator del entrySet
