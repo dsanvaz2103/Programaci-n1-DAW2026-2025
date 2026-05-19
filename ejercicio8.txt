@@ -1,0 +1,2 @@
+
+Texto añadido desde el programa de Java.
