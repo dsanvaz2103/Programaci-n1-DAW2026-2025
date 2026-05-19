@@ -160,6 +160,7 @@
     <a href="#tema6">Tema 6: Interfaces</a>
     <a href="#tema7">Tema 7: Excepciones</a>
     <a href="#tema8">Tema 8: Colecciones (JCF) y Tipos Abstractos de Datos</a>
+    <a href="#tema9">Tema 9: Acceso a Bases de Datos (JDBC)</a>
   </nav>
 
   <main id="inicio">
@@ -1249,6 +1250,72 @@ for (String nombre : nombres) {
     <p>Usaría un HashSet cuando la prioridad sea evitar duplicados y necesite una búsqueda muy rápida, ya que el ArrayList permite repetidos y es más lento para comprobar si un elemento ya existe en listas muy grandes.</p>
   </section>
 </details>
+
+<details id="tema9" open>
+      <summary>Tema 9: Acceso a Bases de Datos (JDBC) y Patrones de Persistencia</summary>
+
+      <section class="card">
+        <h3>🗄️ Enlace de Ejercicios Tema 9 en GitHub</h3>
+        <p>Haz clic en el siguiente enlace para acceder a las prácticas de conectividad:</p>
+        <a class="github-link" 
+           href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema9" 
+           target="_blank">
+          <svg class="github-icon" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg> 
+          Ver ejercicios Unidad 9 en GitHub
+        </a>
+      </section>
+
+      <section class="card">
+        <h3>🔌 Arquitectura JDBC (Java Database Connectivity)</h3>
+        <p>JDBC es una API estándar de Java que permite la ejecución de operaciones SQL de forma independiente a la base de datos utilizada.</p>
+        <ul>
+          <li><strong>Componentes Clave:</strong> Se compone del gestor de controladores (<code>DriverManager</code>) y los drivers específicos proporcionados por los fabricantes (MySQL, PostgreSQL, Oracle).</li>
+          <li><strong>Protocolo de Conexión:</strong> Se establece mediante una cadena URL específica. Ejemplo: <code>jdbc:mysql://localhost:3306/mi_base_datos</code>.</li>
+          <li><strong>Ciclo de vida:</strong> Es imperativo abrir, operar y cerrar los flujos de comunicación utilizando bloques <code>try-with-resources</code> para evitar fugas de memoria (Memory Leaks).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>⚡ Gestión de Sentencias: Statements y Seguridad</h3>
+        <p>La ejecución de sentencias SQL en Java requiere la correcta elección de interfaces para optimizar el rendimiento y blindar la aplicación.</p>
+        <ul>
+          <li><strong>Statement:</strong> Utilizado para consultas estáticas sin parámetros. Presenta serios riesgos de seguridad.</li>
+          <li><strong>PreparedStatement:</strong> Compila la estructura de la consulta en el servidor de Base de Datos antes de recibir los valores. <strong>Es obligatorio</strong> para parametrizar entradas, aumentando el rendimiento y previniendo ataques de <strong>Inyección SQL</strong>.</li>
+          <li><strong>CallableStatement:</strong> Interfaz heredada de las anteriores diseñada específicamente para invocar procedimientos almacenados y funciones dentro de la Base de Datos.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>📊 Procesamiento de Datos con ResultSet</h3>
+        <p>Los resultados devueltos por las consultas de selección estructuradas (<code>SELECT</code>) se gestionan mediante cursores virtuales en Java.</p>
+        <ul>
+          <li><strong>Estructura de cursor:</strong> La interfaz <code>ResultSet</code> mantiene un puntero apuntando inicialmente justo antes de la primera fila de datos.</li>
+          <li><strong>Recorrido Dinámico:</strong> El método <code>next()</code> desplaza el cursor a la siguiente fila. Devuelve <code>false</code> cuando no quedan registros, integrándose perfectamente en bucles <code>while (rs.next()) { ... }</code>.</li>
+          <li><strong>Extracción Tipo-Específica:</strong> Los datos se recuperan mediante métodos específicos por columna, ya sea por índice numérico o por nombre de etiqueta (ej: <code>rs.getInt("id")</code>, <code>rs.getString("nombre")</code>).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>🏗️ El Patrón de Diseño DAO (Data Access Object)</h3>
+        <p>Para mantener los principios de la POO limpios, se aísla por completo la lógica de negocio de los mecanismos físicos de persistencia.</p>
+        <ul>
+          <li><strong>Abstracción:</strong> Se define una <code>interface</code> con las operaciones CRUD básicas (Create, Read, Update, Delete) de la entidad.</li>
+          <li><strong>Implementación (DAO Impl):</strong> Clase concreta que implementa la interfaz utilizando el código JDBC puro. Facilita cambiar de motor de base de datos sin alterar el resto de la aplicación.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>📝 Resumen del Tema 9</h3>
+        <ul>
+          <li>JDBC actúa como puente unificado entre las aplicaciones Java y cualquier motor de base de datos relacional.</li>
+          <li>La seguridad mediante <code>PreparedStatement</code> es innegociable en entornos de producción.</li>
+          <li>El mapeo de datos se realiza fila a fila transformando los registros del <code>ResultSet</code> en colecciones de objetos Java.</li>
+          <li>El patrón DAO garantiza que el código sea modular, escalable y mantenible a largo plazo.</li>
+        </ul>
+      </section>
+    </details>
 
     <footer>
       &copy; 2025/2026 Mi Portafolio de Programación
