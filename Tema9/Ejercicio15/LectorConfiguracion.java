@@ -9,14 +9,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.InputStream;
 
 public class LectorConfiguracion {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         try {
             // 1. Crear la factoría y el constructor de documentos
             DocumentBuilderFactory fabrica = DocumentBuilderFactory.newInstance();
             DocumentBuilder constructor = fabrica.newDocumentBuilder();
 
-            // 2. BUSCAR EL ARCHIVO EN LA MISMA CARPETA QUE ESTA CLASE
-            // Al poner "config.xml" sin barras, busca exactamente en el mismo paquete/directorio de la clase
             InputStream flujoXml = LectorConfiguracion.class.getResourceAsStream("config.xml");
 
             // Controlamos si no encuentra el archivo para dar un mensaje claro
@@ -28,8 +26,6 @@ public class LectorConfiguracion {
             // Parsear el flujo del archivo XML
             Document documento = constructor.parse(flujoXml);
 
-            // Opcional pero recomendado: Normaliza el árbol XML
-            documento.getDocumentElement().normalize();
 
             // 3. Obtener el elemento raíz (<configuracion>)
             Element raiz = documento.getDocumentElement();

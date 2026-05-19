@@ -6,10 +6,12 @@ public class Persona implements Serializable {
     private static final long serialVersion = 1L;
     String nombre;
     String apellido;
+    Direccion direccion;
 
-    public Persona(String nombre, String apellido) {
+    public Persona(String nombre, String apellido,Direccion direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.direccion = direccion;
     }
 
     public String getNombre() {

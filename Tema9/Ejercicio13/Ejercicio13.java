@@ -4,7 +4,8 @@ import java.io.*;
 
 public class Ejercicio13 {
     static void main() {
-        Persona personaFamosa = new Persona("Logan", "Reinos");
+        Direccion d = new Direccion("Caca","papa");
+        Persona personaFamosa = new Persona("Logan", "Reinos",d);
         try {
             FileOutputStream fi = new FileOutputStream("personaFamosa.dat");
             ObjectOutputStream ob = new ObjectOutputStream(fi);
