@@ -1,7 +1,7 @@
 package Tema10.Ejercicio2;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Date;
 
 public class Main {
     public static void main(String[] args) {
