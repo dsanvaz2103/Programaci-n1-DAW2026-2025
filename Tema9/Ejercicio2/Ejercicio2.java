@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
-        // CORREGIDO: Usamos System.in para leer del teclado
+        // Usamos System.in para leer del teclado
         Scanner teclado = new Scanner(System.in);
 
         // PASO 1: Imprimir las instrucciones iniciales
