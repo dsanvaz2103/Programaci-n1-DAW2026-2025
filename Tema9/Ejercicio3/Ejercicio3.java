@@ -2,18 +2,22 @@ package Tema9.Ejercicio3;
 
 import java.io.IOException;
 
-public class Ejercicio3 {
-    static void main() {
-        byte b[] = new byte[5];
-        try {
-            System.in.read(b);
-        } catch (IOException ioe) {
-            System.out.println(ioe);
-        }
-        String s = new String(b);
-        System.out.println(s);
+import java.util.Scanner;
+
+public class EntradaCaracteres {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        // Paso 1 y 2: Instrucciones al usuario
+        System.out.println("Introduzca varios caracteres y después pulse intro para finalizar");
+        String caracteres = teclado.nextLine(); 
+
+        // Paso 3: Hola Mundo personalizado
+        System.out.println("Introduzca su nombre");
+        String nombre = teclado.nextLine();
+        
+        System.out.println("Hola " + nombre + "!");
+        
+        teclado.close();
     }
-    /*
-        Este código cuenta cuántos caracteres introduce el usuario por teclado antes de pulsar la tecla Intro, e imprime ese número total por pantalla.
-     */
 }
