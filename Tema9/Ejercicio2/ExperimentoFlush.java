@@ -9,7 +9,7 @@ public class ExperimentoFlush {
         // Escribimos algo
         escritor.write("¿Donde está mi texto?");
 
-        // SOLUCIÓN: Forzamos el volcado y cerramos el flujo
+        // Cerramos el flujo
         escritor.close();
 
         System.out.println("He escrito en el archivo... ¡y ahora SÍ está guardado!");
