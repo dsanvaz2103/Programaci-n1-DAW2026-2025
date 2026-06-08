@@ -1,4 +1,4 @@
-package Tema11.Ejercicios.Ejercicio6;
+package Tema11.Ejercicio6;
 
 import java.awt.Button;
 import java.awt.FlowLayout;

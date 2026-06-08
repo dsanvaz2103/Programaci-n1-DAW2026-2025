@@ -1,4 +1,4 @@
-package Tema11.Ejercicios.Ejercicio5;
+package Tema11.Ejercicio5;
 
 import java.awt.Color;
 import java.awt.FlowLayout;

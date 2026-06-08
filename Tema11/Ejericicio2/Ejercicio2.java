@@ -1,4 +1,4 @@
-package Tema11.Ejercicios.Ejericicio2;
+package Tema11.Ejericicio2;
 
 import java.awt.Button;
 import java.awt.Frame;

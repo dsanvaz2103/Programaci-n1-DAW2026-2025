@@ -1,4 +1,4 @@
-package Tema11.Ejercicios.Ejercicio3;
+package Tema11.Ejercicio3;
 
 import java.awt.BorderLayout;
 import java.awt.Button;

@@ -1,4 +1,4 @@
-package Tema11.Ejercicios.Ejercicio7;
+package Tema11.Ejercicio7;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Dialog;
