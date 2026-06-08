@@ -1316,6 +1316,140 @@ for (String nombre : nombres) {
         </ul>
       </section>
     </details>
+    <details id="tema10" open>
+  <summary>Tema 10: Persistencia y Bases de Datos</summary>
+
+  <section class="card">
+    <h3>🗄️ Introducción a la UD10</h3>
+    <p>En esta unidad abordamos el problema de la persistencia: cómo hacer que la información de nuestras aplicaciones sobreviva entre distintas ejecuciones, evolucionando desde el almacenamiento en archivos planos hacia el uso avanzado de bases de datos orientadas a objetos y relacionales.</p>
+    <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema10" target="_blank">
+      <svg class="github-icon" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+      Ver ejercicios Unidad 10 en GitHub
+    </a>
+  </section>
+
+  <section class="card">
+    <h3>💎 1. Bases de Datos Orientadas a Objetos (BBDDOO) y JPA</h3>
+    <p>A diferencia del modelo relacional, las BBDDOO almacenan la información directamente en forma de objetos, eliminando la necesidad de traducir los datos. Java utiliza la especificación <strong>JPA (Java Persistence API)</strong> para gestionar este mapeo de forma transparente.</p>
+    <ul>
+      <li><strong>ObjectDB:</strong> SGBD orientado a objetos nativo utilizado para integrar persistencia directa sin SQL.</li>
+      <li><strong>Anotaciones Clave:</strong> Uso de <code>@Entity</code> para marcar clases persistibles, <code>@Id</code> para la clave primaria y <code>@Transient</code> para excluir campos de la base de datos.</li>
+      <li><strong>EntityManager:</strong> Interfaz fundamental encargada de controlar el ciclo de vida de los objetos y las transacciones (<code>persist</code>, <code>find</code>, <code>remove</code>).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>🔍 2. Consultas con JPQL</h3>
+    <p>Java Persistence Query Language (JPQL) permite realizar consultas sobre las entidades y sus atributos en lugar de operar sobre las tablas físicas de la base de datos.</p>
+    <ul>
+      <li>Operaciones de búsqueda avanzadas mediante <code>SELECT</code>, <code>UPDATE</code> y <code>DELETE</code> estructurados bajo lógica de objetos.</li>
+      <li>Uso de parámetros nombrados (ej. <code>:variable</code>) para realizar filtros dinámicos seguros dentro del código de persistencia.</li>
+    </ul>
+    <pre><code>
+TypedQuery&lt;Evento&gt; q = em.createQuery(
+    "SELECT e FROM Evento e WHERE e.precio &gt; :p", Evento.class
+);
+q.setParameter("p", 25.0);
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>⚡ 3. JDBC Relacional y Ejecución en Lote (Batch)</h3>
+    <p>Para interactuar de forma nativa con bases de datos relacionales como MariaDB, empleamos <strong>JDBC</strong>. Aprendimos a optimizar los tiempos de respuesta del servidor reduciendo el tráfico de peticiones.</p>
+    <ul>
+      <li><strong>Manejo de Recursos:</strong> Conexión explícita y segura a través de <code>DriverManager.getConnection()</code>.</li>
+      <li><strong>Procesamiento Batch:</strong> Agrupación de múltiples sentencias de actualización SQL en un único lote a través de <code>addBatch()</code> y su posterior ejecución masiva con <code>executeBatch()</code>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>📊 4. Extracción de Metadatos</h3>
+    <p>La API de JDBC no solo permite manipular registros, sino que también ofrece herramientas avanzadas para auditar la estructura física interna del propio sistema gestor.</p>
+    <ul>
+      <li>Uso de la interfaz <code>DatabaseMetaData</code> para extraer dinámicamente información estructural sin lanzar consultas de selección complejas.</li>
+      <li>Permite recuperar de forma programática las tablas de la base de datos, las columnas de una entidad, la URL de conexión y la versión del driver o SGBD utilizado.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="reflection"><strong>Reflexión:</strong> ¿Qué diferencia a JPA frente a JDBC a nivel arquitectónico?</p>
+    <p>JPA nos permite trabajar bajo el paradigma puro de la Orientación a Objetos, abstrayéndonos por completo del lenguaje SQL. JDBC, por el contrario, nos sitúa a bajo nivel otorgándonos un control manual, absoluto y milimétrico sobre las consultas y el rendimiento físico del motor de la base de datos relacional.</p>
+  </section>
+</details>
+
+
+<details id="tema11" open>
+  <summary>Tema 11: Interfaces Gráficas de Usuario (GUI)</summary>
+
+  <section class="card">
+    <h3>🚀 Introducción a la UD11</h3>
+    <p>En este tema abandonamos el flujo secuencial de las aplicaciones en consola (CUI) para dar el salto al desarrollo de interfaces visuales e interactivas de ventanas (GUI), fundamentadas en el paradigma de la programación dirigida por eventos.</p>
+    <a class="github-link" href="https://github.com/dsanvaz2103/Programaci-n1-DAW2026-2025/tree/master/Tema11" target="_blank">
+      <svg class="github-icon" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+      Ver ejercicios Unidad 11 en GitHub
+    </a>
+  </section>
+
+  <section class="card">
+    <h3>🖼️ 1. Librerías Gráficas, Componentes y Contenedores</h3>
+    <p>Estudiamos el ecosistema y evolución de las herramientas nativas de Java (<strong>AWT, Swing y JavaFX</strong>), asimilando que toda interfaz se edifica mediante una jerarquía estricta de elementos.</p>
+    <ul>
+      <li><strong>Componentes (Controles):</strong> Elementos visuales básicos de interacción interactiva (<code>JButton</code>, <code>JTextField</code>, <code>JLabel</code>).</li>
+      <li><strong>Contenedores:</strong> Componentes especiales cuya función es albergar y agrupar a otros controles en su interior (<code>JFrame</code> como ventana principal y <code>JPanel</code> para subdivisiones).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>📐 2. Gestores de Distribución (Layout Managers)</h3>
+    <p>Un Layout Manager es el motor matemático encargado de calcular de forma dinámica el tamaño y la localización de los componentes, garantizando que la interfaz sea fluida y elástica.</p>
+    <ul>
+      <li><code>FlowLayout</code>: Posiciona elementos de forma secuencial, uno al lado del otro, saltando de línea si no hay espacio.</li>
+      <li><code>BorderLayout</code>: Divide el área del contenedor en 5 regiones estratégicas (North, South, East, West y Center).</li>
+      <li><code>GridLayout</code>: Organiza el espacio en una cuadrícula rígida de filas y columnas uniformes.</li>
+      <li><strong>Diseño Absoluto (null):</strong> Desactiva los gestores automáticos para forzar posiciones estáticas manuales mediante coordenadas <code>setBounds(x, y, ancho, alto)</code>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>🛡️ 3. Modelo de Delegación de Eventos</h3>
+    <p>La interacción del usuario no sigue un orden lineal. El sistema reacciona de manera asíncrona mediante el patrón arquitectónico <strong>Observer</strong>.</p>
+    <ul>
+      <li><strong>Event Source:</strong> El componente visual que sufre la acción física (ej. un clic en un botón) y genera un objeto de evento (<code>ActionEvent</code>).</li>
+      <li><strong>Event Listener (Oyente):</strong> Interfaz dedicada a "escuchar" el evento. Para activarlo, debe registrarse explícitamente en el componente mediante métodos como <code>addActionListener()</code>.</li>
+    </ul>
+    <pre><code>
+// Estructura clásica implementando la interfaz ActionListener
+public class MiVentana extends JFrame implements ActionListener {
+    public MiVentana() {
+        boton.addActionListener(this);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Código de respuesta al evento
+    }
+}
+    </code></pre>
+  </section>
+
+  <section class="card">
+    <h3>📋 4. Construcción Jerárquica de Menús</h3>
+    <p>Los sistemas de menús desplegables complejos de escritorio siguen un ensamblaje inverso y anidado de tres niveles:</p>
+    <ul>
+      <li><code>JMenuItem</code>: Las opciones u hojas individuales del menú final sobre las que se puede hacer clic.</li>
+      <li><code>JMenu</code>: Los bloques desplegables intermedios que agrupan a los items independientes.</li>
+      <li><code>JMenuBar</code>: La barra superior horizontal contenedora que se ancla directamente al armazón del <code>JFrame</code>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="reflection"><strong>Reflexión:</strong> ¿Por qué es una mala práctica abusar del diseño absoluto (null layout) en interfaces de escritorio?</p>
+    <p>Porque las aplicaciones con posicionamiento absoluto pierden la adaptabilidad. Si el usuario redimensiona la ventana, maximiza la pantalla o ejecuta el programa en un sistema operativo con una resolución o escala de fuentes distinta, los componentes visuales se descolocarán, se solaparán o quedarán parcialmente invisibles.</p>
+  </section>
+</details>
 
     <footer>
       &copy; 2025/2026 Mi Portafolio de Programación
