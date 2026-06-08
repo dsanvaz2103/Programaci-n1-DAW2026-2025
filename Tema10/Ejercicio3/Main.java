@@ -1,14 +1,14 @@
-package Tema10.Ejercicio3;
+package Tema10.Ejercicios.Ejercicio3;
 
-import Tema10.Ejercicio2.GeneroMusical;
+import Tema10.Ejercicios.Ejercicio2.GeneroMusical;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Date;
 
 public class Main {
     public static void main(String[] args) {
 
-        EventoMusical ev = new EventoMusical("Resurrection Fest", new Date(), new BigDecimal("2500000"), GeneroMusical.METAL);
+        EventoMusical ev = new EventoMusical("Resurrection Fest", new Date(2026,7,12), new BigDecimal("2500000"), GeneroMusical.METAL);
 
         // Probamos la variable transient de control
         ev.setControl(1);

@@ -1,12 +1,12 @@
-package Tema10.Ejercicio3;
+package Tema10.Ejercicios.Ejercicio3;
 
-import Tema10.Ejercicio2.Artista;
-import Tema10.Ejercicio2.GeneroMusical;
+import Tema10.Ejercicios.Ejercicio2.Artista;
+import Tema10.Ejercicios.Ejercicio2.GeneroMusical;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import javax.persistence.*;
 

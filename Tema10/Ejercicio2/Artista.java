@@ -1,4 +1,4 @@
-package Tema10.Ejercicio2;
+package Tema10.Ejercicios.Ejercicio2;
 
 import java.io.Serializable;
 import javax.persistence.Embeddable;

@@ -1,5 +1,5 @@
-package Tema10.Ejercicio2;
+package Tema10.Ejercicios.Ejercicio2;
 
 public enum GeneroMusical {
-    ROCK, POP, ELECTRONICA, METAL, JAZZ, RAP
+    ROCK, POP, METAL
 }

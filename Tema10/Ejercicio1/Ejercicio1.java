@@ -1,4 +1,4 @@
-package Tema10.Ejercicio1;
+package Tema10.Ejercicios.Ejercicio1;
 
 import java.math.BigDecimal;
 import java.util.Date;

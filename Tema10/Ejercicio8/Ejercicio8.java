@@ -28,6 +28,8 @@ public class Ejercicio8 {
             stmt.addBatch("INSERT INTO producto VALUES ('3', 'uva', 'Uvas groumet', 30, 'Espana')");
             stmt.addBatch("UPDATE producto SET precio = 20 WHERE nombre = 'pera'");
 
+            // Se elimina la línea de 'produco' que daba error
+
             stmt.executeBatch(); // Ejecutar lote 1
             con.commit();        // Guardar cambios
             stmt.clearBatch();   // Limpiar lote para que no se repitan las queries
@@ -42,7 +44,7 @@ public class Ejercicio8 {
             con.commit();        // Guardar cambios
 
 
-            // --- USO DEL MÉTODO execute() ---
+            // --- uso del Metodo execute() ---
             String queryEspana = "SELECT * FROM producto WHERE pais = 'Espana'";
 
             // execute() devuelve true si es un SELECT
